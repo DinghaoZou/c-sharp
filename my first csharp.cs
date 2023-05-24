@@ -66,6 +66,50 @@ namespace MyApplication
       int hey, hello, areYouThere;
       hey = hello = areYouThere = 30;
       Console.WriteLine(hey + hello + areYouThere);
+
+// C# keywords cannot be used as variable names.
+
+// Another C# variable type: long - Bigger Numbers Than What 'int' Can Store
+
+      long longNumber = 15000000000000000;
+      Console.WriteLine(longNumber);
+
+// Another C# variable type: float - Decimal Number, Cannot Store As Much Digits As 'double'
+// 'float' and 'double' variables can have scientific numbers. (Has an "e" that indicates the power of 10.)
+
+      float floatScientific = 35e3F;
+      double doubleScientific = 12E4D;
+      Console.WriteLine(floatScientific);
+      Console.WriteLine(doubleScientific);
+
+// Type Casting: Assigning a value of one data variable type to another data variable type.
+// Implicit Casting (Auto) - Smaller to Bigger - char, int, long, float, double
+// Explicit Casting (Manual) - Bigger to Smaller - double, float, long, int, char
+
+      int aFunnyNumber = 10;
+      double aFunnyDouble = aFunnyNumber;
+
+// When doing explicit casting, one must put the variable type name in parentheses in front of the value.
+
+      double justADouble = 1.59;
+      int justAnInteger = (int) justADouble;
+      Console.WriteLine(justADouble);
+      Console.WriteLine(justAnInteger);
+
+      int integerAgain = 15;
+      double doubleAgain = 6.25;
+      bool boolAgain = false;
+
+      Console.WriteLine(Convert.ToString(integerAgain));    // Int -> String
+      Console.WriteLine(Convert.ToDouble(integerAgain));    // Int -> Double
+      Console.WriteLine(Convert.ToInt32(doubleAgain));  // Double -> Int
+      Console.WriteLine(Convert.ToString(boolAgain));   // Bool -> String
+
+// Use 'Console.ReadLine()' to get user input for a variable.
+
+      Console.WriteLine("Please enter your name.");
+      string username = Console.ReadLine();
+      Console.WriteLine("Your name is " + username + ".");
     }
   }
 }
