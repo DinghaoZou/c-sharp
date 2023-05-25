@@ -110,6 +110,44 @@ namespace MyApplication
       Console.WriteLine("Please enter your name.");
       string username = Console.ReadLine();
       Console.WriteLine("Your name is " + username + ".");
+
+// Arithmetic Operators
+
+/*
++ - Addition - 1 + 2 -> 3
+- - Subtraction - 5 - 3 -> 2
+* - Multiplication - 3 * 4 -> 12
+/ - Division - 6 / 2 -> 3
+% - Modulus (Division Remainder) - 17 % 4 -> 1 (If you divide 17 by 4, you'll get 4 with a remainder of 1.)
+*/
+
+// If you use "[Integer Variable]++", you'll increase the value of that variable by 1.
+// If you use "[Integer Variable]--", you'll decrease the value of that variable by 1.
+
+      int added = 0;
+      int subtracted = 1;
+
+      added++;
+      subtracted--;
+
+      Console.WriteLine(added);
+      Console.WriteLine(subtracted);
+
+// Assignment Operators
+
+/*
+Operator                Exactly Like
+x += y                  x = x + y
+x -= y                  x = x - y
+x *= y                  x = x * y
+x /= y                  x = x / y
+x %= y                  x = x % y
+x &= y                  x = x & y
+x |= y                  x = x | y 
+x ^= y                  x = x ^ y
+x >>= y                 x = x >> y
+x <<= y                 x = x << y
+*/
     }
   }
 }
