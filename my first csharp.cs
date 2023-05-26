@@ -148,6 +148,40 @@ x ^= y                  x = x ^ y
 x >>= y                 x = x >> y
 x <<= y                 x = x << y
 */
+
+// Comparison Operators
+// Compare two values to see if the comparison is true or false. Will return a boolean.
+
+      int biggerNumber = 7;
+      int smallerNumber = 4;
+
+      Console.WriteLine(biggerNumber < smallerNumber); // Returns False
+
+/*
+== - Equal To
+!= - Not Equal To
+> - Greater Than
+< - Less Than
+>= - Greater Than or Equal To
+<= - Less Than or Equal To
+*/
+
+// Logical Operators
+
+/*
+&& - Logical And - Returns True if all statements are True.
+|| - Logical Or - Return True if one of the statements are True.
+! - Logical Not - Reverse the result, returns False if the result is True.
+*/
+
+      Math.Max(5, 10); // Returns 10 - Returns the highest value.
+      Math.Min(5, 10); // Returns 5 - Returns the lowest value.
+      Math.Sqrt(64); // Return 8 - Returns the square root of the value.
+      Math.Abs(-2); // Returns 2 - Returns the absolute value (Positive) of the value.
+      Math.Round(9.99); // Returns 10 - Rounds the value to the nearest whole number, then returns the rounded value.
+
+      string allTheLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      Console.WriteLine(allTheLetters.Length); // [String Variable].length - Returns the length of a string in characters.
     }
   }
 }
