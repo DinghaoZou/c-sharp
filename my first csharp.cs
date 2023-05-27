@@ -182,6 +182,29 @@ x <<= y                 x = x << y
 
       string allTheLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       Console.WriteLine(allTheLetters.Length); // [String Variable].length - Returns the length of a string in characters.
+
+      Console.WriteLine(allTheLetters.ToUpper()); // [String Variable].ToUpper - Makes all the letters in the string uppercase.
+      Console.WriteLine(allTheLetters.ToLower()); // [String Variable].ToLower - Makes all the letters in the string lowercase.
+
+      string firstName = "Harry ";
+      string lastName = "Zou";
+      string name = firstName + lastName; // The "+" combines the two strings together into one string. (Concatenation)
+      Console.WriteLine(name); 
+
+      string firstName2 = "Annie ";
+      string lastName2 = "Zou";
+      string name2 = string.Concat(firstName2, lastName2); // string.Concat() combines the submitted strings into one string.
+      Console.WriteLine(name2);
+
+      Console.WriteLine($"My brother's full name is: {firstName}{lastName}"); // String Interpolation is the act of using variables in a string without putting it outside the string borders. You must put "$" at the beginning of the string to use String Interpolation, and you must put the variables inside curved brackets for String Interpolation to work.
+
+      string greetings = "Hi there!";
+      Console.WriteLine(greetings[0]); // To access a character in a string, put the string variable name and brackets at the end with a number inside. The first character is 0, the second character is 1, and so on.
+      Console.WriteLine(greetings.IndexOf("e")); // Use IndexOf() to find the first appearance of the character in a string.
+
+      int aCharacterPosition = name.IndexOf("Z");
+      string lastNameAgain = name.Substring(aCharacterPosition); // Substring() extracts a part of a string starting from the specified character position, and returns a new string.
+      Console.WriteLine(lastNameAgain);
     }
   }
 }
