@@ -205,6 +205,92 @@ x <<= y                 x = x << y
       int aCharacterPosition = name.IndexOf("Z");
       string lastNameAgain = name.Substring(aCharacterPosition); // Substring() extracts a part of a string starting from the specified character position, and returns a new string.
       Console.WriteLine(lastNameAgain);
+
+// Use backslash (\) to make special characters in strings.
+/*
+      \' - ' - Single Quote
+      \" - " - Double Quote
+      \\ - \ - Backslash
+      \n - New Line
+      \t - Tab
+      \b - Backspace
+*/
+
+      int height = 70;
+
+      if (height > 72) { // Checks if a condition is true.
+            Console.WriteLine("Wow, you are really tall.");
+      } else if (height > 48) { // Checks if this condition is true if the previous condition is false.
+            Console.WriteLine("You are the average height, nice.");
+      } else { // Runs this code if the rest of the conditions are false.
+            Console.WriteLine("Wow, you are really short.");
+      }
+
+      string areYouTall = (height > 72) ? "You are tall." : "You are not tall.";
+      Console.WriteLine(areYouTall);
+
+      int dayOfTheWeek = 4;
+
+      switch (dayOfTheWeek) // The argument of the switch is the variable the switch checks.
+      {
+            case 1: // A switch will check if the variable will match with the cases, if it finds a match it will run the code inside the case.
+                  Console.WriteLine("Monday");
+                  break; // Breaks out of the switch statement.
+            case 2:
+                  Console.WriteLine("Tuesday");
+                  break;
+            case 3:
+                  Console.WriteLine("Wednesday");
+                  break;
+            case 4:
+                  Console.WriteLine("Thursday");
+                  break;
+            case 5:
+                  Console.WriteLine("Friday");
+                  break;
+            case 6:
+                  Console.WriteLine("Saturday");
+                  break;
+            case 7:
+                  Console.WriteLine("Sunday");
+                  break;
+            default: // Acts like an "else" for "switch' statements, specifies a code to run if the variable of the argument doesn't match with any of the cases.
+                  Console.WriteLine("That's not a day of the week.");
+                  break;
+      }
+
+      int aNumberAgain = 0;
+
+      while (aNumberAgain < 5) { // A "while" statement constantly runs a code as long the condition is true.
+            Console.WriteLine(aNumberAgain);
+            aNumberAgain++;
+      }
+ 
+      aNumberAgain = 0;
+
+      // The "do" statement is a flipped version of the "while" statement. First it runs the code, then it checks if the condition is true. If the condition is true, it runs the code in the "do" statement again.
+      do {
+            Console.WriteLine(aNumberAgain);
+            aNumberAgain++;
+      } while (aNumberAgain < 5);
+
+      // In a "for" statment:
+
+      /*
+            The first statement is a code that is ran only one time before the loop.
+            The second statment is the condition for the loop.
+            The third statment is a code that is ran after the code in the "for" loop is ran. 
+      */
+
+      for (int aNumberAgainAgain = 0; aNumberAgainAgain < 5; aNumberAgainAgain++) {
+            Console.WriteLine(aNumberAgainAgain);
+      }
+
+      string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+      foreach (string i in cars) { // "foreach" is a statement that loops through elements in an array.
+            Console.WriteLine(i);
+      }
     }
   }
 }
