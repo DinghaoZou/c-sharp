@@ -13,6 +13,7 @@
 /* WriteLine() can be used to print numbers. (And it also can be used to calculate math.) */
 
 using System;
+using System.Linq;
 
 namespace MyApplication
 {
@@ -291,6 +292,58 @@ x <<= y                 x = x << y
       foreach (string i in cars) { // "foreach" is a statement that loops through elements in an array.
             Console.WriteLine(i);
       }
+
+      for (int anotherIntegerHaha = 0; anotherIntegerHaha < 10; anotherIntegerHaha++) {
+            if (anotherIntegerHaha == 4) {
+                  break; // The "break" statement stops a loop.
+            }
+            Console.WriteLine(anotherIntegerHaha);
+      }
+
+      for (int aaaaa = 0; aaaaa < 10; aaaaa++) {
+            if (aaaaa == 4) {
+                  continue; // The "continue" statement skips a loop section.
+            }
+            Console.WriteLine(aaaaa);
+      }
+
+      // To make an array, put square brackets at the end of the variable type name.
+      string[] languages = {"Chinese", "English", "Japanese"};
+      int[] numbersOfTen = {10, 20, 30, 40, 50};
+
+      languages[2] = "Spanish"; // To change a specific array element, put the index number in brackets after the variable name.
+
+      Console.WriteLine(languages.Length); // Find how long an array is with the "Length" property.
+
+      // Different ways to create arrays:
+
+      string[] emptyArray = new string[4]; // Creates an empty array to add values later.
+      string[] fruits = new string[4] {"Apple", "Orange", "Banana", "Peach"}; // Creates an array right away.
+      string[] vegetables = new string[] {"Spinach", "Lettuce", "Carrot"}; // Creates an array without specifiying the size.
+      string[] snacks = {"Doritos", "Lays"}; // Creates an array without specifiying the size and without using the "new" keyword.
+
+      // If you add values to an already existing array, you must use the "new" keyword or else it will cause an error.
+
+      string[] notEmptyArray;
+      notEmptyArray = new string[] {"Not", "Empty", "Array"};
+
+      string[] alphabetsNotInOrder = {"C", "A", "B"};
+      Array.Sort(alphabetsNotInOrder); // Use the "Sort" method to sort an array alphabetically (Strings) or in a numerical ascending order. (Integers)
+      int[] numbersNotInOrder = {3, 1, 2};
+      Array.Sort(numbersNotInOrder);
+
+      foreach (string blah in cars) {
+            Console.WriteLine(blah);
+      }
+      foreach (string blahblah in cars) {
+            Console.WriteLine(blahblah);
+      }
+
+      int[] numbersAgainAndAgain = {6, 1, 8, 9};
+      Console.WriteLine(numbersAgainAndAgain.Max());  // Returns Largest Value
+      Console.WriteLine(numbersAgainAndAgain.Min());  // returns Smallest Value
+      Console.WriteLine(numbersAgainAndAgain.Sum());  // Returns the Sum of All of the Numbers
+      // All of these methods require the "System.Linq" namespace.
     }
   }
 }
