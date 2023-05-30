@@ -19,6 +19,14 @@ namespace MyApplication
 {
   class Program
   {
+      // Multiple methods can have the same name with different parameters and data types.
+      static int additionMethod(int x, int y) {
+            return x + y;
+      }
+
+      static double additionMethod(double x, double y) {
+            return x + y;
+      }
     static void Main(string[] args)
     {
       Console.WriteLine("Hello World!");
@@ -344,6 +352,50 @@ x <<= y                 x = x << y
       Console.WriteLine(numbersAgainAndAgain.Min());  // returns Smallest Value
       Console.WriteLine(numbersAgainAndAgain.Sum());  // Returns the Sum of All of the Numbers
       // All of these methods require the "System.Linq" namespace.
+
+      // To put arrays in an array, put a comma inside the square brackets.
+      int[,] arrayInArray = {{1, 4, 2}, {3, 6, 5}};
+      // To access elements in an array in an array, use multiple indexes based on how deep the array is.
+      Console.WriteLine(arrayInArray[0, 1]);
+      // Using a "foreach" on an array in an array will output all of the elements, but not whole arrays.
+      foreach (int aeiou in arrayInArray) {
+            Console.WriteLine(aeiou);
+      }
+
+      static void myFirstMethod() { // A method is a bunch of code that can be saved and used for later. Useful for not clogging up the code.
+            Console.WriteLine("Method executed.");
+      }
+
+      myFirstMethod();
+
+      static void myFriendIs(string friendName, string friendIsA) { // You can put parameters in a method so that when you use the method, you can change some of the values inside the method.
+            Console.WriteLine("My friend is " + friendName + " and they're a " + friendIsA + ".");
+      }
+
+      myFriendIs("Moonlight", "Fox-Cat Hybrid");
+      myFriendIs("AJ", "Finarian");
+      myFriendIs("Podz", "Crewmate");
+      myFriendIs(friendIsA: "Demon Cat", friendName: "Staples"); // You can use the "key: value" syntax so that the order of the arguments doesn't matter.
+
+      static void countries(string country = "China") { // You can set a default parameter value, making the parameter optional.
+            Console.WriteLine(country);
+      }
+
+      countries("United States");
+      countries("Japan");
+      countries(); // Because the parameter isn't set, it will output the default value, which is China.
+      countries("Mexico");
+
+      static int fivePlus(int x) { // To make a method return a value, put a data type instead of "void".
+            return 5 + x; // Use "return" to return a value.
+      }
+
+      Console.WriteLine(fivePlus(5));
+
+      // Multiple methods can have the same name with different parameters and data types.
+
+      Console.WriteLine(additionMethod(3.2, 4.6));
+      Console.WriteLine(additionMethod(3, 4));
     }
   }
 }
