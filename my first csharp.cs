@@ -27,7 +27,7 @@ namespace MyApplication
       static double additionMethod(double x, double y) {
             return x + y;
       }
-    static void Main(string[] args)
+    static void Main(string[] args) // The method named "Main" will always be executed first.
     {
       Console.WriteLine("Hello World!");
       Console.WriteLine("I am Learning C#");
@@ -396,6 +396,25 @@ x <<= y                 x = x << y
 
       Console.WriteLine(additionMethod(3.2, 4.6));
       Console.WriteLine(additionMethod(3, 4));
+
+      Car.notMain(); // You can access methods from other classes via [Class Name].[Method Name]();.
+
+      Fruit myFirstFruit = new Fruit(); // You can create objects using classes from other files.
+      Console.WriteLine(myFirstFruit.typeOfFruit);
+
+      EnergyDrink cocaCola = new EnergyDrink();
+      cocaCola.brandColor = "Red"; // You can change an object's properties later.
+      cocaCola.calories = 182;
+      Console.WriteLine("Coca Cola's brand color is " + cocaCola.brandColor + ".");
     }
+  }
+
+  public class Car { // A class is a template for objects. To make a class accessable by other classes, put "public" at the start of the class.
+      string color = "Red";
+
+      public static void notMain() {
+            Car myFirstObject = new Car(); // By creating an object, which is an instance of a class, it has properties given by the class.
+            Console.WriteLine(myFirstObject.color); // To access an object's properties, do [Object Name].[Property Name].
+      }
   }
 }
