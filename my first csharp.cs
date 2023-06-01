@@ -406,6 +406,13 @@ x <<= y                 x = x << y
       cocaCola.brandColor = "Red"; // You can change an object's properties later.
       cocaCola.calories = 182;
       Console.WriteLine("Coca Cola's brand color is " + cocaCola.brandColor + ".");
+
+      learningBook algebraBook = new learningBook();
+      Console.WriteLine(algebraBook.subject);
+
+      pet aDog = new pet();
+      aDog.Name = "Lucky"; // Using the "Name" method, you can access the private field.
+      Console.WriteLine(aDog.Name);
     }
   }
 
