@@ -413,6 +413,18 @@ x <<= y                 x = x << y
       pet aDog = new pet();
       aDog.Name = "Lucky"; // Using the "Name" method, you can access the private field.
       Console.WriteLine(aDog.Name);
+
+      TheFoodItself aNewPiece = new TheFoodItself(); // Make a "aNewPiece" object from the "TheFoodItself" class.
+      aNewPiece.eat(); // Because "TheFoodItself" is derived from "FastFood", "aNewPiece" has all the fields and methods from both "TheFoodItself" and "FastFood".
+      Console.WriteLine(aNewPiece.brand + " " + aNewPiece.foodType);
+
+      Animal myAnimal = new Animal();
+      Animal myCat = new Cat();
+      Animal myDog = new Dog();
+
+      myAnimal.animalSound();
+      myCat.animalSound();
+      myDog.animalSound();
     }
   }
 

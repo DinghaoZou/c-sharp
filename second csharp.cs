@@ -36,4 +36,35 @@ Internal - Only Accessible Within Own Assembly, Not From Another Assembly
       set {name = value;} // Assigns a "value" to the "name" variable, which represents the value that is assigned to the property.
     }
   }
+
+  class FastFood { // Base Parent Class
+    public string brand = "McDonalds"; // FastFood Field
+    public void eat() { // FastFood Method
+      Console.WriteLine("Nom!");
+    }
+  }
+
+  // If you don't want a class to get inherited by other classed, put "sealed" before the class.
+
+  class TheFoodItself : FastFood { // Derived Child Class
+    public string foodType = "Chicken Nuggets"; // TheFoodItself Field
+  }
+
+  class Animal {
+    public virtual void animalSound() { // The base class uses has the "virtual" keyword for its method.
+      Console.WriteLine("Animal made a sound.");
+    }
+  }
+
+  class Cat : Animal {
+    public override void animalSound() { // The derived classes use the "override" keyword so the drived classes can have their own method results with the same method name.
+      Console.WriteLine("Meow.");
+    }
+  }
+
+  class Dog : Animal {
+    public override void animalSound() {
+      Console.WriteLine("Woof.");
+    }
+  }
 }
