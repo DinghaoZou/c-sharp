@@ -425,6 +425,17 @@ x <<= y                 x = x << y
       myAnimal.animalSound();
       myCat.animalSound();
       myDog.animalSound();
+
+      Joe hisNameIsJoe = new Joe(); // Create a "Joe" object.
+      hisNameIsJoe.catchphrase(); // Abstract Method
+      hisNameIsJoe.sleep(); // Regular Method
+
+      Jupiter bigBigJupiter = new Jupiter();
+      bigBigJupiter.typeOfPlanet();
+
+      exampleClass exampleObject = new exampleClass();
+      exampleObject.exampleMethod(); // One object can contain two interfaces' methods.
+      exampleObject.SecondExampleMethod();
     }
   }
 

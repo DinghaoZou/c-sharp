@@ -67,4 +67,45 @@ Internal - Only Accessible Within Own Assembly, Not From Another Assembly
       Console.WriteLine("Woof.");
     }
   }
+
+  abstract class Citizen { // An abstract class cannot be used to create an object. It can only be access it by making it be inherited from another class.
+    public abstract void catchphrase(); // An abstract method can only be used in an abstract class, and does not have a body. The body comes from the derived class.
+    public void sleep() {
+      Console.WriteLine("Zzzzzzz...");
+    }
+  }
+
+  class Joe : Citizen { // Derived class inherited from "Citizen".
+    public override void catchphrase() { // The body of "catchphrase" is given here.
+      Console.WriteLine("We'll make lots of money tomorrow.");
+    }
+  }
+
+  interface IPlanet { // An interface is a completely abstract class which can only contain abstract methods and properties. Both abstract classes and interfaces can't create objects.
+    void typeOfPlanet(); // Interface method that doesn't have a body.
+  }
+
+  class Jupiter : IPlanet { // The class "Jupiter" implements the IPlanet interface.
+    public void typeOfPlanet() { // Body of typeOfPlanet is provided here.
+      Console.WriteLine("Gas Giant");
+    }
+  }
+
+  interface IFirstExample {
+    void exampleMethod();
+  }
+
+  interface ISecondExample {
+    void SecondExampleMethod();
+  }
+
+  class exampleClass : IFirstExample, ISecondExample { // Multiple interfaces can be implemented, to implement multiple interfaces, separate them with commas.
+    public void exampleMethod() {
+      Console.WriteLine("Text...");
+    }
+
+    public void SecondExampleMethod() {
+      Console.WriteLine("Text 2...");
+    }
+  }
 }
