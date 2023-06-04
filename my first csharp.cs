@@ -14,11 +14,41 @@
 
 using System;
 using System.Linq;
+using System.IO; // Allows one to work with files. (VERY DANGEROUS, ONE SHOULD ONLY USE THIS IF THEY KNOW WHAT THEY'RE DOING!)
 
 namespace MyApplication
 {
+      enum Level { // Enums are "classes" that represents a group of constants, which are unchangeable, unalterable, and read-only variables.
+            Low,
+            Medium,
+            High
+      }
+
   class Program
   {
+      enum oneToFive { // One can have enums inside classes.
+            One,
+            Two,
+            Three,
+            Four,
+            Five
+      }
+
+      enum FourMonths // The value is zero for the first item inside an enum, and then it increases by one from there.
+      {
+            January,    // 0
+            February,   // 1
+            March,      // 2
+            April,      // 3
+      }
+
+      enum whatIsGoingOnAnymore { // One can assign custom integers to enum values, and the next items will update their numbers accordingly.
+            TheMonday,        // 0
+            TheTuesday,       // 1
+            TheWedensday=6,   // 6
+            TheThursday,      // 7
+      }
+      
       // Multiple methods can have the same name with different parameters and data types.
       static int additionMethod(int x, int y) {
             return x + y;
@@ -436,6 +466,47 @@ x <<= y                 x = x << y
       exampleClass exampleObject = new exampleClass();
       exampleObject.exampleMethod(); // One object can contain two interfaces' methods.
       exampleObject.SecondExampleMethod();
+
+      Level myLevel = Level.Medium; // You can access enum items with dot syntax.
+      Console.WriteLine(myLevel);
+
+      oneToFive aNumberBetweenOneToFive = oneToFive.Three;
+      Console.WriteLine(aNumberBetweenOneToFive);
+
+      int aMonthOfAllMonths = (int) FourMonths.April; // To get an integer value from an item in an enum, you must convert the item into an integer.
+      Console.WriteLine(aMonthOfAllMonths);
+
+      int hahahahahaIDontKnow = (int) whatIsGoingOnAnymore.TheThursday;
+      Console.WriteLine(hahahahahaIDontKnow); 
+
+      string writeText = "Hello World"; // Text String
+      File.WriteAllText("filename.txt", writeText); // Creates a file that contains the text string.
+
+      string readText = File.ReadAllText("filename.txt"); // Extracts the contants of a file and puts it in a string.
+      Console.WriteLine(readText);
+
+// File Class Methods
+/*
+AppendText() - Appends the text at the end of an existing file.
+Copy() - Copies a file.
+Create() - Creates/Overwites a file.
+Delete() - Deletes a file.
+Exists() - Shows whether a file exists or not.
+ReadAllText() - Extracts the contents of a file as a string.
+Replace() - Replaces the contents of a file with the contents of another file.
+WriteAllText() - Creates a new file and writes contents into it. (An already existing file will be overwritten.) 
+*/
+
+// Try-Catch-Finally Statements
+
+      try { // Looks for errors in code.
+            int[] aNormalArrayWaitWhatAreYouDoingThatIsOutOfBounds = {1, 2, 3};
+            Console.WriteLine(aNormalArrayWaitWhatAreYouDoingThatIsOutOfBounds[10]);
+      } catch (Exception e) { // If an error is found, it runs a code.
+            Console.WriteLine(e.Message);
+      } finally { // Runs a code after the error finding, regardless of result.
+            Console.WriteLine("Finished searching for problems.");
+      }
     }
   }
 
