@@ -57,6 +57,23 @@ namespace MyApplication
       static double additionMethod(double x, double y) {
             return x + y;
       }
+
+      static void checkAge(int age) {
+            if (age < 18) {
+                  throw new ArithmeticException("You must be at least 18 years old.");  // One can use "throw" to create a custom error. 
+// The "throw" statement is used together with exception class.
+/*
+Examples of Exception Classes:
+- ArithmeticException
+- FileNotFoundException
+- IndexOutOfRangeException
+- TimeOutException
+*/
+            } else {
+                  Console.WriteLine("You are old enough.");
+            }
+      }
+
     static void Main(string[] args) // The method named "Main" will always be executed first.
     {
       Console.WriteLine("Hello World!");
@@ -503,10 +520,12 @@ WriteAllText() - Creates a new file and writes contents into it. (An already exi
             int[] aNormalArrayWaitWhatAreYouDoingThatIsOutOfBounds = {1, 2, 3};
             Console.WriteLine(aNormalArrayWaitWhatAreYouDoingThatIsOutOfBounds[10]);
       } catch (Exception e) { // If an error is found, it runs a code.
-            Console.WriteLine(e.Message);
+            Console.WriteLine(e.Message); // Use the variable "e" inside the catch block together with the "Message" property turns the error message into a string.
       } finally { // Runs a code after the error finding, regardless of result.
             Console.WriteLine("Finished searching for problems.");
       }
+
+      checkAge(15); 
     }
   }
 
